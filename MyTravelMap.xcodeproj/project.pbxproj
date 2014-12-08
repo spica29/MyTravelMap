@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20CA0AF61A361EFD00F8207B /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 20CA0AF51A361EFD00F8207B /* GoogleMaps.bundle */; };
 		20CA0AF81A361F2300F8207B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA0AF71A361F2300F8207B /* AVFoundation.framework */; };
 		20CA0AFA1A361F2800F8207B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA0AF91A361F2800F8207B /* CoreData.framework */; };
 		20CA0AFC1A361F2C00F8207B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA0AFB1A361F2C00F8207B /* CoreLocation.framework */; };
@@ -28,6 +27,7 @@
 		E956F94F1A361138001AB27F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E956F94E1A361138001AB27F /* Images.xcassets */; };
 		E956F9521A361138001AB27F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E956F9501A361138001AB27F /* LaunchScreen.xib */; };
 		E956F95E1A361138001AB27F /* MyTravelMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E956F95D1A361138001AB27F /* MyTravelMapTests.m */; };
+		E98718CE1A3624190007C15F /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E98718CD1A3624190007C15F /* GoogleMaps.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		20CA0AF51A361EFD00F8207B /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = ../GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		20CA0AF71A361F2300F8207B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		20CA0AF91A361F2800F8207B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		20CA0AFB1A361F2C00F8207B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -68,6 +67,7 @@
 		E956F9571A361138001AB27F /* MyTravelMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTravelMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E956F95C1A361138001AB27F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E956F95D1A361138001AB27F /* MyTravelMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTravelMapTests.m; sourceTree = "<group>"; };
+		E98718CD1A3624190007C15F /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +104,7 @@
 		E956F9351A361138001AB27F = {
 			isa = PBXGroup;
 			children = (
+				E98718CD1A3624190007C15F /* GoogleMaps.bundle */,
 				20CA0B451A36207600F8207B /* GoogleMaps.framework */,
 				20CA0B0D1A361F6800F8207B /* SystemConfiguration.framework */,
 				20CA0B0B1A361F6000F8207B /* QuartzCore.framework */,
@@ -117,7 +118,6 @@
 				20CA0AFB1A361F2C00F8207B /* CoreLocation.framework */,
 				20CA0AF91A361F2800F8207B /* CoreData.framework */,
 				20CA0AF71A361F2300F8207B /* AVFoundation.framework */,
-				20CA0AF51A361EFD00F8207B /* GoogleMaps.bundle */,
 				E956F9401A361138001AB27F /* MyTravelMap */,
 				E956F95A1A361138001AB27F /* MyTravelMapTests */,
 				E956F93F1A361138001AB27F /* Products */,
@@ -257,7 +257,7 @@
 				E956F94D1A361138001AB27F /* Main.storyboard in Resources */,
 				E956F9521A361138001AB27F /* LaunchScreen.xib in Resources */,
 				E956F94F1A361138001AB27F /* Images.xcassets in Resources */,
-				20CA0AF61A361EFD00F8207B /* GoogleMaps.bundle in Resources */,
+				E98718CE1A3624190007C15F /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +413,7 @@
 					/Users/faik/Projects/Academy387Group3/GoogleMaps.framework,
 					/Users/faik/Projects/Academy387Group3/GoogleMaps.framework/Versions/A,
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -433,6 +434,7 @@
 					/Users/faik/Projects/Academy387Group3/GoogleMaps.framework,
 					/Users/faik/Projects/Academy387Group3/GoogleMaps.framework/Versions/A,
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

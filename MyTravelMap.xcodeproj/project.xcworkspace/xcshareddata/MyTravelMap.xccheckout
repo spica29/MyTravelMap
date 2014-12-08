@@ -22,7 +22,7 @@
 		<key>3EC1223B3254BE5865EAE9EF0FCEA7379F696D9C</key>
 		<string>../..</string>
 		<key>8A78DB7EAAEEBB4B9DF1025D5B936E9A4E80074E</key>
-		<string>../../../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/spica29/MyTravelMap.git</string>
@@ -38,7 +38,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>8A78DB7EAAEEBB4B9DF1025D5B936E9A4E80074E</string>
 			<key>IDESourceControlWCCName</key>
-			<string>..</string>
+			<string></string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
