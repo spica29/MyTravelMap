@@ -27,6 +27,9 @@
 		E956F94F1A361138001AB27F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E956F94E1A361138001AB27F /* Images.xcassets */; };
 		E956F9521A361138001AB27F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E956F9501A361138001AB27F /* LaunchScreen.xib */; };
 		E956F95E1A361138001AB27F /* MyTravelMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E956F95D1A361138001AB27F /* MyTravelMapTests.m */; };
+		E956F9781A363245001AB27F /* ViewControllerAddTravel.m in Sources */ = {isa = PBXBuildFile; fileRef = E956F9751A363245001AB27F /* ViewControllerAddTravel.m */; };
+		E956F9791A363245001AB27F /* ViewControllerTravelListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E956F9771A363245001AB27F /* ViewControllerTravelListViewController.m */; };
+		E956F97C1A363269001AB27F /* Travel.m in Sources */ = {isa = PBXBuildFile; fileRef = E956F97B1A363269001AB27F /* Travel.m */; };
 		E98718CE1A3624190007C15F /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E98718CD1A3624190007C15F /* GoogleMaps.bundle */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +70,12 @@
 		E956F9571A361138001AB27F /* MyTravelMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTravelMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E956F95C1A361138001AB27F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E956F95D1A361138001AB27F /* MyTravelMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTravelMapTests.m; sourceTree = "<group>"; };
+		E956F9741A363245001AB27F /* ViewControllerAddTravel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerAddTravel.h; path = ../ViewControllerAddTravel.h; sourceTree = "<group>"; };
+		E956F9751A363245001AB27F /* ViewControllerAddTravel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerAddTravel.m; path = ../ViewControllerAddTravel.m; sourceTree = "<group>"; };
+		E956F9761A363245001AB27F /* ViewControllerTravelListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerTravelListViewController.h; path = ../ViewControllerTravelListViewController.h; sourceTree = "<group>"; };
+		E956F9771A363245001AB27F /* ViewControllerTravelListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerTravelListViewController.m; path = ../ViewControllerTravelListViewController.m; sourceTree = "<group>"; };
+		E956F97A1A363269001AB27F /* Travel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Travel.h; sourceTree = "<group>"; };
+		E956F97B1A363269001AB27F /* Travel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Travel.m; sourceTree = "<group>"; };
 		E98718CD1A3624190007C15F /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +145,12 @@
 		E956F9401A361138001AB27F /* MyTravelMap */ = {
 			isa = PBXGroup;
 			children = (
+				E956F97A1A363269001AB27F /* Travel.h */,
+				E956F97B1A363269001AB27F /* Travel.m */,
+				E956F9741A363245001AB27F /* ViewControllerAddTravel.h */,
+				E956F9751A363245001AB27F /* ViewControllerAddTravel.m */,
+				E956F9761A363245001AB27F /* ViewControllerTravelListViewController.h */,
+				E956F9771A363245001AB27F /* ViewControllerTravelListViewController.m */,
 				E956F9451A361138001AB27F /* AppDelegate.h */,
 				E956F9461A361138001AB27F /* AppDelegate.m */,
 				E956F9481A361138001AB27F /* ViewController.h */,
@@ -276,7 +291,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E956F94A1A361138001AB27F /* ViewController.m in Sources */,
+				E956F97C1A363269001AB27F /* Travel.m in Sources */,
 				E956F9471A361138001AB27F /* AppDelegate.m in Sources */,
+				E956F9791A363245001AB27F /* ViewControllerTravelListViewController.m in Sources */,
+				E956F9781A363245001AB27F /* ViewControllerAddTravel.m in Sources */,
 				E956F9441A361138001AB27F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
