@@ -15,29 +15,57 @@
 
 @implementation ViewController{
     GMSMapView *mapView_;
+    CLLocationDegrees latitude;
+    CLLocationDegrees longitude;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    // API za koordinate zadanog grada
+    NSString* city = @"Sarajevo";
+    NSString* serverPath = [[NSString alloc] initWithFormat:@("https://maps.googleapis.com/maps/api/geocode/json?address=%@&key=AIzaSyCbQwlpEl2MRB-il9MljyU5wCcR8fOXEfQ"), city];
+    NSURL* serverUrl = [[NSURL alloc] initWithString:serverPath];
+    
+    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:serverUrl];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                               latitude = [[[[[responseDict valueForKey:@"results"] valueForKey:@"geometry"] valueForKey:@"location"]valueForKey:@"lat" ] doubleValue];
+                           }];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                               longitude = [[[[[responseDict valueForKey:@"results"] valueForKey:@"geometry"] valueForKey:@"location"]valueForKey:@"lng" ] doubleValue];
+                           }];
+    
+    [self mapa];
+}
+
+-(void)mapa {
     // Create a GMSCameraPosition that tells the map to display the
-    // coordinate -33.86,151.20 at zoom level 6.
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
-                                                            longitude:151.20
-                                                                 zoom:6];
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: latitude
+                                                            longitude: longitude
+                                                                 zoom:1];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.myLocationEnabled = YES;
-    mapView_.mapType = kGMSTypeSatellite;
+    mapView_.mapType = kGMSTypeNormal;//mijenjati tipove mape
+    mapView_.mapType = kGMSTypeTerrain;
+    mapView_.mapType = kGMSTypeHybrid;
     self.view = mapView_;
     
     // Creates a marker in the center of the map.
     GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
-    marker.title = @"Sydney";
-    marker.snippet = @"Australia";
+    marker.position = CLLocationCoordinate2DMake(latitude, longitude);
+    //marker.title = @"Sydney";
+    //marker.snippet = @"Australia";
     marker.map = mapView_;
 }
-
 
 
 - (void)didReceiveMemoryWarning {
