@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
-/Users/academy387/MyTravelMap/MyTravelMap/ViewController.m
+
+
+
 @end
 

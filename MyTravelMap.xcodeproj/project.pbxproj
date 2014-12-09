@@ -20,6 +20,7 @@
 		20CA0B0C1A361F6000F8207B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA0B0B1A361F6000F8207B /* QuartzCore.framework */; };
 		20CA0B0E1A361F6800F8207B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA0B0D1A361F6800F8207B /* SystemConfiguration.framework */; };
 		20CA0B461A36207600F8207B /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA0B451A36207600F8207B /* GoogleMaps.framework */; };
+		E924CE5A1A37655000F05F7A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E924CE591A37655000F05F7A /* MainViewController.m */; };
 		E956F9441A361138001AB27F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E956F9431A361138001AB27F /* main.m */; };
 		E956F9471A361138001AB27F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E956F9461A361138001AB27F /* AppDelegate.m */; };
 		E956F94A1A361138001AB27F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E956F9491A361138001AB27F /* ViewController.m */; };
@@ -57,6 +58,8 @@
 		20CA0B0B1A361F6000F8207B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		20CA0B0D1A361F6800F8207B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		20CA0B451A36207600F8207B /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		E924CE581A37655000F05F7A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = SOURCE_ROOT; };
+		E924CE591A37655000F05F7A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = SOURCE_ROOT; };
 		E956F93E1A361138001AB27F /* MyTravelMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTravelMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E956F9421A361138001AB27F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E956F9431A361138001AB27F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 				E956F9481A361138001AB27F /* ViewController.h */,
 				E956F9491A361138001AB27F /* ViewController.m */,
 				E956F94B1A361138001AB27F /* Main.storyboard */,
+				E924CE581A37655000F05F7A /* MainViewController.h */,
+				E924CE591A37655000F05F7A /* MainViewController.m */,
 				E956F94E1A361138001AB27F /* Images.xcassets */,
 				E956F9501A361138001AB27F /* LaunchScreen.xib */,
 				E956F9411A361138001AB27F /* Supporting Files */,
@@ -294,6 +299,7 @@
 				E956F97C1A363269001AB27F /* Travel.m in Sources */,
 				E956F9471A361138001AB27F /* AppDelegate.m in Sources */,
 				E956F9791A363245001AB27F /* ViewControllerTravelListViewController.m in Sources */,
+				E924CE5A1A37655000F05F7A /* MainViewController.m in Sources */,
 				E956F9781A363245001AB27F /* ViewControllerAddTravel.m in Sources */,
 				E956F9441A361138001AB27F /* main.m in Sources */,
 			);
