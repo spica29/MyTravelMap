@@ -18,8 +18,7 @@
 
 
 
+- (NSString *)fullDetails;
 
-
-- (NSString *) getDestination;
 
 @end

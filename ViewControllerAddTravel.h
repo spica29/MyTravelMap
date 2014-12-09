@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "Travel.h"
 
-@interface ViewControllerAddTravel : ViewController
+@interface ViewControllerAddTravel : UIViewController
 @property Travel *travel;
 @property (weak, nonatomic) IBOutlet UIButton *btnAdd;
 @property (weak, nonatomic) IBOutlet UIButton *btnStar1;

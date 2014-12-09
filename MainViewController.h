@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface MainViewController : ViewController
+@interface MainViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *btnAddTravel;
 @property (weak, nonatomic) IBOutlet UIButton *btnTravelList;

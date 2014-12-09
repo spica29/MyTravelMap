@@ -7,6 +7,8 @@
 //
 
 #import "ViewControllerAddTravel.h"
+#import "ViewControllerTravelListViewController.h"
+
 
 
 @interface ViewControllerAddTravel ()
@@ -17,32 +19,97 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.btnStar1 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.btnStar2 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.btnStar3 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.btnStar4 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.btnStar5 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     // Do any additional setup after loading the view.
 }
 
 - (IBAction)saveClicked:(id)sender {
+    self.travel = [[Travel alloc] init];
     self.travel.destination=self.tBoxDestination.text;
     self.travel.experience=self.tBoxExperience.text;
     self.travel.date=self.datePicker.date;
     
+    
+   [self performSegueWithIdentifier:@"saveToCell" sender:self];
+    
+    
     //desava se dodjela na klik dugmeta AddTravel
 }
+
+//ViewControllerTravelListViewController
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqual:(@"saveToCell")])
+    {
+        ViewControllerTravelListViewController *controler= (ViewControllerTravelListViewController*)[segue destinationViewController];
+        [controler setNewTravel:self.travel];
+    }
+}
+
 - (IBAction)btnStar1Click:(id)sender {
-    self.travel.rating=1;
+    NSInteger i=1;
+    self.travel.rating=&i;
+    
+    
+    [self.btnStar1 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [self.btnStar2 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.btnStar3 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.btnStar4 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.btnStar5 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     //Ovdje treba dodati boju
 }
 - (IBAction)btnStar2Click:(id)sender {
-    self.travel.rating=2;
+    NSInteger i=2;
+    self.travel.rating=&i;
+     [self.btnStar1 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+     [self.btnStar2 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [self.btnStar3 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.btnStar4 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.btnStar5 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+
+    
 }
 - (IBAction)btnStar3Click:(id)sender {
-    self.travel.rating=3;
+    NSInteger i=3;
+    self.travel.rating=&i;
+    [self.btnStar1 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [self.btnStar2 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [self.btnStar3 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [self.btnStar4 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.btnStar5 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+
+    
 }
 - (IBAction)btnStar4Click:(id)sender {
-    self.travel.rating=4;
+    NSInteger i=4;
+    self.travel.rating=&i;
+    [self.btnStar1 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [self.btnStar2 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [self.btnStar3 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [self.btnStar4 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [self.btnStar5 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+
+
 }
 - (IBAction)btnStar5Click:(id)sender {
-    self.travel.rating=5;
+    NSInteger i=5;
+    self.travel.rating=&i;
+    [self.btnStar1 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [self.btnStar2 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [self.btnStar3 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [self.btnStar4 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [self.btnStar5 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
