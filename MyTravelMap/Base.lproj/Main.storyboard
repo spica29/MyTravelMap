@@ -59,6 +59,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="147" y="41" width="198" height="30"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="ttj-Ys-HRA" id="iWi-NG-tI8"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1FE-v5-G1k">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -81,11 +84,15 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="28" y="307" width="339" height="182"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="ttj-Ys-HRA" id="aHC-Oz-lhy"/>
+                                </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJU-3E-Byw">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <state key="normal" title="*">
+                                    <color key="titleColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -236,6 +243,7 @@
                         <outlet property="datePicker" destination="6eX-QY-EFK" id="7EZ-cK-KPN"/>
                         <outlet property="tBoxDestination" destination="jGG-n6-0w0" id="tP5-bx-LQS"/>
                         <outlet property="tBoxExperience" destination="xmD-at-0dF" id="iBq-vt-KZF"/>
+                        <segue destination="RLb-2d-d3r" kind="show" identifier="saveToCell" id="aIq-P3-yKW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59g-th-Icv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -313,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOK-ym-lgR" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="1172"/>
+            <point key="canvasLocation" x="-369" y="1344"/>
         </scene>
         <!--View Controller Travel List View Controller-->
         <scene sceneID="Ca1-O4-3Un">
@@ -344,7 +352,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="197" id="fQu-s9-3qJ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="travelInfo" rowHeight="197" id="fQu-s9-3qJ">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fQu-s9-3qJ" id="tZK-0T-KqK">
@@ -355,6 +363,10 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="527"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="RLb-2d-d3r" id="FSz-yZ-5gR"/>
+                                    <outlet property="delegate" destination="RLb-2d-d3r" id="cQD-KM-Cbi"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -382,6 +394,7 @@
         <image name="slika" width="640" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BQ5-wM-neZ"/>
+        <segue reference="ESH-9b-PCm"/>
+        <segue reference="aIq-P3-yKW"/>
     </inferredMetricsTieBreakers>
 </document>

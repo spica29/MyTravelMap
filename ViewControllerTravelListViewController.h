@@ -7,7 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "Travel.h"
+@interface ViewControllerTravelListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@interface ViewControllerTravelListViewController : ViewController
+@property Travel *travel;
+
+-(void)setNewTravel:(Travel *)travelToShow;
 
 @end

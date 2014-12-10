@@ -19,6 +19,22 @@
     // Do any additional setup after loading the view.
 }
 
+
+-(void)setNewTravel:(Travel *)travelToShow
+{
+    self.travel=travelToShow;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"travelInfo"];
+    cell.textLabel.text = [self.travel fullDetails];
+    return cell;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

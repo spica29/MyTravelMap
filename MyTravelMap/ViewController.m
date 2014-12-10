@@ -26,7 +26,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     // API za koordinate zadanog grada
-    NSString* city = @"Sarajevo";
+    NSString* city = @"Zurich";
     NSString* serverPath = [[NSString alloc] initWithFormat:@("https://maps.googleapis.com/maps/api/geocode/json?address=%@&key=AIzaSyCbQwlpEl2MRB-il9MljyU5wCcR8fOXEfQ"), city];
     NSURL* serverUrl = [[NSURL alloc] initWithString:serverPath];
     
@@ -54,7 +54,7 @@
     // Create a GMSCameraPosition that tells the map to display the
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: latitude
                                                             longitude: longitude
-                                                                 zoom:1];
+                                                                 zoom:5];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.myLocationEnabled = YES;
     mapView_.mapType = kGMSTypeNormal;//mijenjati tipove mape
