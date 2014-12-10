@@ -16,13 +16,11 @@
 
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"dd mm yyyy"];
+    [formatter setDateFormat:@"dd MM yyyy"];
     NSString *stringFromDate = [formatter stringFromDate:self.date];
-    NSString *inStr = [NSString stringWithFormat: @"%ld", (long)self.rating];
     
 
-    
-    NSString *fullDetails=[[NSString alloc] initWithFormat:@"Destination: %@\nRating: %@/5\nExperience: %@\nTravel date: %@", self.destination,inStr ,self.description, stringFromDate];
+    NSString *fullDetails=[[NSString alloc] initWithFormat:@"Destination: %@\nRating: %ld/5\nExperience: %@\nTravel date: %@", self.destination ,(long)self.rating ,self.experience, stringFromDate];
     
 
     return fullDetails;

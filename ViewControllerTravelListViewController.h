@@ -12,6 +12,9 @@
 
 @property Travel *travel;
 
+
+-(void)addTravelInArray: (Travel*)travelM;
+
 -(void)setNewTravel:(Travel *)travelToShow;
 
 @end

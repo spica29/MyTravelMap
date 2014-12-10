@@ -21,4 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *tBoxDestination;
 @property (weak, nonatomic) IBOutlet UITextView *tBoxExperience;
 
+
+- (void)btnStarColor:(NSInteger)rating;
+
 @end
