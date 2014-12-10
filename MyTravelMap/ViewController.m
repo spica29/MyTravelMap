@@ -21,10 +21,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    latitude = 0;
+    longitude = 0;
     // Do any additional setup after loading the view, typically from a nib.
     
     // API za koordinate zadanog grada
-    NSString* city = @"Sarajevo";
+    NSString* city = @"Zurich";
     NSString* serverPath = [[NSString alloc] initWithFormat:@("https://maps.googleapis.com/maps/api/geocode/json?address=%@&key=AIzaSyCbQwlpEl2MRB-il9MljyU5wCcR8fOXEfQ"), city];
     NSURL* serverUrl = [[NSURL alloc] initWithString:serverPath];
     
@@ -34,24 +36,23 @@
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
                                NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-                               //latitude = [[[[[responseDict valueForKey:@"results"] valueForKey:@"geometry"] valueForKey:@"location"]valueForKey:@"lat" ] doubleValue];
+                               latitude = [[[[[[responseDict valueForKey:@"results"] valueForKey:@"geometry"] valueForKey:@"location"]valueForKey:@"lat" ] objectAtIndex:0] doubleValue];
+                               longitude = [[[[[[responseDict valueForKey:@"results"] valueForKey:@"geometry"] valueForKey:@"location"]valueForKey:@"lng" ] objectAtIndex:0] doubleValue];
+                               [self mapa];
                            }];
     
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                               NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-                               //longitude = [[[[[responseDict valueForKey:@"results"] valueForKey:@"geometry"] valueForKey:@"location"]valueForKey:@"lng" ] doubleValue];
-                           }];
+    //NSLog(@"latitude: %f longitude: %f", latitude, longitude);
+    //addressCoordinate = CLLocationCoordinate2DMake((CLLocationDegrees)[[latArray objectAtIndex:indexPath.row] doubleValue],(CLLocationDegrees)[[longArray objectAtIndex:indexPath.row] doubleValue]);
     
-    [self mapa];
 }
+
+//https://maps.googleapis.com/maps/api/place/autocomplete/output?parameters autocomplete
 
 -(void)mapa {
     // Create a GMSCameraPosition that tells the map to display the
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: latitude
                                                             longitude: longitude
-                                                                 zoom:1];
+                                                                 zoom:5];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.myLocationEnabled = YES;
     mapView_.mapType = kGMSTypeNormal;//mijenjati tipove mape
