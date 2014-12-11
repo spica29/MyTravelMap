@@ -418,6 +418,7 @@
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="0.72612504778789044" blue="0.74090883387122941" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.73018882473622471" blue="0.7691968808115468" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="travelInfo2" id="YCh-SK-Ywb">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -458,7 +459,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BQ5-wM-neZ"/>
-        <segue reference="aIq-P3-yKW"/>
+        <segue reference="ESH-9b-PCm"/>
+        <segue reference="NSz-Mq-8em"/>
     </inferredMetricsTieBreakers>
 </document>
