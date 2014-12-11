@@ -34,10 +34,10 @@
     self.travel.destination=self.tBoxDestination.text;
     self.travel.experience=self.tBoxExperience.text;
     self.travel.date=self.datePicker.date;
-    MemoryStorage sharedManager
+    //MemoryStorage sharedManager
     
     
-   [self performSegueWithIdentifier:@"saveToCell" sender:self];
+   //[self performSegueWithIdentifier:@"saveToCell" sender:self];
     
     
     //desava se dodjela na klik dugmeta AddTravel

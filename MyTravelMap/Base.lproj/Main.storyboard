@@ -7,7 +7,6 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
@@ -16,7 +15,6 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-<<<<<<< HEAD
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-R0-QcO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -37,20 +35,14 @@
                                 <include reference="A6h-R0-QcO"/>
                             </mask>
                         </variation>
-=======
-                        <color key="backgroundColor" red="1" green="0.87771433450000003" blue="0.71096857739999997" alpha="1" colorSpace="calibratedRGB"/>
->>>>>>> fcd6fdfe5aa29080148f1948d2179c8b8ebc61fb
                     </view>
                     <connections>
                         <outlet property="mapView" destination="A6h-R0-QcO" id="pTq-Rt-c9H"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="1312.5" y="75"/>
-=======
-            <point key="canvasLocation" x="405" y="381"/>
->>>>>>> fcd6fdfe5aa29080148f1948d2179c8b8ebc61fb
         </scene>
         <!--View Controller Add Travel-->
         <scene sceneID="gEW-fB-IMm">
@@ -431,6 +423,7 @@
                         <viewControllerLayoutGuide type="bottom" id="NBO-2q-xKH"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iP2-yP-Iat">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
