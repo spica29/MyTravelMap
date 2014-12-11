@@ -12,8 +12,16 @@
 
 
 @property NSString *someProperty;
+<<<<<<< HEAD
 @property NSMutableArray *listTravelsArray;
 
 +(id)sharedManager;
 
 @end
+=======
+@property NSMutableArray *array;
+
++(id)sharedManager;
+
+@end
+>>>>>>> 7d833aae378cb885cac0222de9ee234ff9ed1778

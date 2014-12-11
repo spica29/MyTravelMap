@@ -58,9 +58,6 @@
     mapView_.mapType = kGMSTypeNormal;//mijenjati tipove mape
     mapView_.mapType = kGMSTypeTerrain;
     mapView_.mapType = kGMSTypeHybrid;
-    
-   //self.view = mapView_;
-    
     self.mapView = mapView_;
     
     // Creates a marker in the center of the map.

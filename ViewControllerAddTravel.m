@@ -10,8 +10,6 @@
 #import "ViewControllerTravelListViewController.h"
 #import "MemoryStorage.h"
 
-
-
 @interface ViewControllerAddTravel ()
 @property MemoryStorage *TravelsMemory;
 @end
@@ -29,7 +27,6 @@
     self.travel.numDays=1;
     
     _TravelsMemory=[MemoryStorage sharedManager];
-    
 
     // Do any additional setup after loading the view.
 }
@@ -39,10 +36,11 @@
     self.travel.destination=self.tBoxDestination.text;
     self.travel.experience=self.tBoxExperience.text;
     self.travel.date=self.datePicker.date;
+    //MemoryStorage sharedManager
     
     [_TravelsMemory.listTravelsArray addObject:self.travel];
     
-   [self performSegueWithIdentifier:@"saveToCell" sender:self];
+   //[self performSegueWithIdentifier:@"saveToCell" sender:self];
     
     //desava se dodjela na klik dugmeta AddTravel
 }

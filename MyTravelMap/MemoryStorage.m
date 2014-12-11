@@ -24,10 +24,17 @@
 -(id)init {
     if (self = [super init]) {
         self.someProperty = @"Some String";
+<<<<<<< HEAD
         self.listTravelsArray = [[NSMutableArray alloc] init];
     }
     return self;
     
+=======
+        self.array = [[NSMutableArray alloc] init];
+    }
+    return self;
+
+>>>>>>> 7d833aae378cb885cac0222de9ee234ff9ed1778
 }
 
 @end
