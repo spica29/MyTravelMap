@@ -15,6 +15,7 @@
 @property NSDate *date;
 @property NSString *experience;
 @property NSInteger rating;
+@property NSInteger numOfDays;
 
 
 

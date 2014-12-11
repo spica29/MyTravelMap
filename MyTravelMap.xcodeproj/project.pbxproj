@@ -32,6 +32,7 @@
 		E956F9791A363245001AB27F /* ViewControllerTravelListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E956F9771A363245001AB27F /* ViewControllerTravelListViewController.m */; };
 		E956F97C1A363269001AB27F /* Travel.m in Sources */ = {isa = PBXBuildFile; fileRef = E956F97B1A363269001AB27F /* Travel.m */; };
 		E98718CE1A3624190007C15F /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E98718CD1A3624190007C15F /* GoogleMaps.bundle */; };
+		E9D9E1001A3A054700C527CF /* MemoryStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D9E0FF1A3A054700C527CF /* MemoryStorage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		E956F97A1A363269001AB27F /* Travel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Travel.h; sourceTree = "<group>"; };
 		E956F97B1A363269001AB27F /* Travel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Travel.m; sourceTree = "<group>"; };
 		E98718CD1A3624190007C15F /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		E9D9E0FE1A3A04DC00C527CF /* MemoryStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryStorage.h; sourceTree = "<group>"; };
+		E9D9E0FF1A3A054700C527CF /* MemoryStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryStorage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 		E956F9401A361138001AB27F /* MyTravelMap */ = {
 			isa = PBXGroup;
 			children = (
+				E9D9E0FE1A3A04DC00C527CF /* MemoryStorage.h */,
+				E9D9E0FF1A3A054700C527CF /* MemoryStorage.m */,
 				E956F97A1A363269001AB27F /* Travel.h */,
 				E956F97B1A363269001AB27F /* Travel.m */,
 				E956F9741A363245001AB27F /* ViewControllerAddTravel.h */,
@@ -295,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D9E1001A3A054700C527CF /* MemoryStorage.m in Sources */,
 				E956F94A1A361138001AB27F /* ViewController.m in Sources */,
 				E956F97C1A363269001AB27F /* Travel.m in Sources */,
 				E956F9471A361138001AB27F /* AppDelegate.m in Sources */,

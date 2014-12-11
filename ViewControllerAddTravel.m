@@ -8,7 +8,7 @@
 
 #import "ViewControllerAddTravel.h"
 #import "ViewControllerTravelListViewController.h"
-
+#import "MemoryStorage.h"
 
 
 @interface ViewControllerAddTravel ()
@@ -25,8 +25,6 @@
     [self.btnStar4 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [self.btnStar5 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     self.travel = [[Travel alloc] init];
-    
-   
 
     // Do any additional setup after loading the view.
 }
@@ -36,6 +34,7 @@
     self.travel.destination=self.tBoxDestination.text;
     self.travel.experience=self.tBoxExperience.text;
     self.travel.date=self.datePicker.date;
+    MemoryStorage sharedManager
     
     
    [self performSegueWithIdentifier:@"saveToCell" sender:self];

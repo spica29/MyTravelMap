@@ -15,12 +15,12 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.87771433450000003" blue="0.71096857739999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790.5" y="377"/>
+            <point key="canvasLocation" x="405" y="381"/>
         </scene>
         <!--View Controller Add Travel-->
         <scene sceneID="gEW-fB-IMm">
@@ -195,7 +195,7 @@
                                 </variation>
                             </datePicker>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.87771433450000003" blue="0.71096857739999997" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="tN8-QL-Hsh"/>
@@ -248,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59g-th-Icv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-25.5" y="389"/>
+            <point key="canvasLocation" x="-322.5" y="381"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="ah5-fK-qSn">
@@ -262,13 +262,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slika" highlightedImage="AlignCenter" translatesAutoresizingMaskIntoConstraints="NO" id="dPC-wU-Irx">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.61574687788692983" green="0.73169404268264771" blue="0.72724106953994105" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="7" y="0.0" width="400" height="600"/>
-                                </variation>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOd-jf-0sj">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.58136147520000003" green="0.73169404270000005" blue="0.58441698230000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -277,7 +270,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="191" y="504" width="112" height="30"/>
+                                    <rect key="frame" x="120" y="462" width="161" height="60"/>
                                 </variation>
                                 <connections>
                                     <segue destination="RLb-2d-d3r" kind="show" id="NSz-Mq-8em"/>
@@ -286,29 +279,28 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCX-SY-TjF">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.56524954240000003" green="0.73169404270000005" blue="0.67134815579999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
                                 <state key="normal" title="Add travel">
                                     <color key="titleColor" red="0.73169404270000005" green="0.1609624607" blue="0.1869675006" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="205" y="461" width="84" height="30"/>
+                                    <rect key="frame" x="120" y="381" width="161" height="55"/>
                                 </variation>
                                 <connections>
                                     <segue destination="ttj-Ys-HRA" kind="show" id="DPd-pw-z0W"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.83810810170000005" blue="0.65760725360000005" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="dPC-wU-Irx"/>
                                 <exclude reference="mOd-jf-0sj"/>
                                 <exclude reference="xCX-SY-TjF"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="dPC-wU-Irx"/>
                                 <include reference="mOd-jf-0sj"/>
                                 <include reference="xCX-SY-TjF"/>
                             </mask>
@@ -321,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOK-ym-lgR" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-369" y="1344"/>
+            <point key="canvasLocation" x="-333" y="1112"/>
         </scene>
         <!--View Controller Travel List View Controller-->
         <scene sceneID="Ca1-O4-3Un">
@@ -369,6 +361,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.83810810170000005" blue="0.65760725360000005" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -380,7 +373,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.83810810170000005" blue="0.65760725360000005" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="wp6-UD-ofR"/>
@@ -397,15 +390,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rTC-Hx-RHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="765" y="1172"/>
+            <point key="canvasLocation" x="550.5" y="1074"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="AlignCenter" width="24" height="18"/>
-        <image name="slika" width="640" height="960"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ESH-9b-PCm"/>
-        <segue reference="aIq-P3-yKW"/>
+        <segue reference="NSz-Mq-8em"/>
     </inferredMetricsTieBreakers>
 </document>
