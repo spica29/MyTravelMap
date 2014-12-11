@@ -36,12 +36,10 @@
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
                                NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-
                                latitude = [[[[[[responseDict valueForKey:@"results"] valueForKey:@"geometry"] valueForKey:@"location"]valueForKey:@"lat" ] objectAtIndex:0] doubleValue];
                                longitude = [[[[[[responseDict valueForKey:@"results"] valueForKey:@"geometry"] valueForKey:@"location"]valueForKey:@"lng" ] objectAtIndex:0] doubleValue];
                                [self mapa];
                            }];
-    
     
     //NSLog(@"latitude: %f longitude: %f", latitude, longitude);
     //addressCoordinate = CLLocationCoordinate2DMake((CLLocationDegrees)[[latArray objectAtIndex:indexPath.row] doubleValue],(CLLocationDegrees)[[longArray objectAtIndex:indexPath.row] doubleValue]);

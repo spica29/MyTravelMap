@@ -14,8 +14,12 @@
 @property NSString *destination;
 @property NSDate *date;
 @property NSString *experience;
-@property NSInteger *rating;
+@property NSInteger rating;
 
+
+
+
+-(void)addTravel;
 
 
 - (NSString *)fullDetails;
