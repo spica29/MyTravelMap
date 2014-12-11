@@ -8,11 +8,12 @@
 
 #import "ViewControllerAddTravel.h"
 #import "ViewControllerTravelListViewController.h"
+#import "MemoryStorage.h"
 
 
 
 @interface ViewControllerAddTravel ()
-
+@property MemoryStorage *TravelsMemory;
 @end
 
 @implementation ViewControllerAddTravel
@@ -25,8 +26,10 @@
     [self.btnStar4 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [self.btnStar5 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     self.travel = [[Travel alloc] init];
+    self.travel.numDays=1;
     
-   
+    _TravelsMemory=[MemoryStorage sharedManager];
+    
 
     // Do any additional setup after loading the view.
 }
@@ -37,9 +40,9 @@
     self.travel.experience=self.tBoxExperience.text;
     self.travel.date=self.datePicker.date;
     
+    [_TravelsMemory.listTravelsArray addObject:self.travel];
     
    [self performSegueWithIdentifier:@"saveToCell" sender:self];
-    
     
     //desava se dodjela na klik dugmeta AddTravel
 }
@@ -83,7 +86,7 @@
 
 
 
-
+//u ovoj funkciji se dodju boje za batne
 
 - (void)btnStarColor:(NSInteger)rating
 {
@@ -125,10 +128,31 @@
 }
 
 
+- (IBAction)numberDays:(id)sender {
+    NSString *inStr = [NSString stringWithFormat: @"%ld", (long)self.sliderDay.value];
+    
+    self.lblNumberDays.text= inStr;
+    self.travel.numDays=self.sliderDay.value;
+}
+
+
+
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
-    return YES;}
+    return YES;
+}
+
+- (BOOL)textView:(UITextView *)textView
+shouldChangeTextInRange:(NSRange)range
+ replacementText:(NSString *)text {
+    if([text isEqual:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    } else {
+        return YES;
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

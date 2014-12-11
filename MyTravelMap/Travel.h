@@ -8,18 +8,19 @@
 
 
 #import <Foundation/Foundation.h>
+#import "City.h"
 
 @interface Travel : NSObject
 
 @property NSString *destination;
+
+@property City *city;
 @property NSDate *date;
 @property NSString *experience;
 @property NSInteger rating;
+@property NSInteger numDays;
 
 
-
-
--(void)addTravel;
 
 
 - (NSString *)fullDetails;

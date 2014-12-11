@@ -15,8 +15,30 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqs-YT-PS8" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="58" width="370" height="394"/>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.75686274509803919" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="jqs-YT-PS8"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="jqs-YT-PS8"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="jqs-YT-PS8" id="uKA-cH-koE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,7 +71,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="28" y="82" width="99" height="21"/>
+                                    <rect key="frame" x="28" y="74" width="99" height="21"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jGG-n6-0w0">
@@ -76,16 +98,16 @@
                                     <action selector="saveClicked:" destination="ttj-Ys-HRA" eventType="touchUpInside" id="p8K-Me-2GQ"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xmD-at-0dF">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="xmD-at-0dF">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.97277462120000002" green="0.97277462120000002" blue="0.97277462120000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="28" y="307" width="339" height="182"/>
+                                    <rect key="frame" x="28" y="365" width="339" height="134"/>
                                 </variation>
                                 <connections>
-                                    <outlet property="delegate" destination="ttj-Ys-HRA" id="aHC-Oz-lhy"/>
+                                    <outlet property="delegate" destination="ttj-Ys-HRA" id="Hna-Zv-ITG"/>
                                 </connections>
                             </textView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJU-3E-Byw">
@@ -108,7 +130,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="28" y="278" width="99" height="21"/>
+                                    <rect key="frame" x="28" y="336" width="99" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOp-Xb-SmS">
@@ -191,11 +213,38 @@
                                     <!--2014-12-08 17:33:40 +0000-->
                                 </date>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="28" y="108" width="339" height="162"/>
+                                    <rect key="frame" x="28" y="100" width="339" height="162"/>
                                 </variation>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of days:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOQ-3T-72u">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="28" y="271" width="152" height="21"/>
+                                </variation>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="4ZB-Zv-Dcd">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="39" y="298" width="330" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberDays:" destination="ttj-Ys-HRA" eventType="valueChanged" id="tXq-t8-64s"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgF-3X-xQi">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="318" y="271" width="42" height="26"/>
+                                </variation>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.80013731100022556" blue="0.54386803230539926" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="tN8-QL-Hsh"/>
@@ -212,6 +261,9 @@
                                 <exclude reference="VAI-fK-8b6"/>
                                 <exclude reference="Tg0-y2-cjp"/>
                                 <exclude reference="6eX-QY-EFK"/>
+                                <exclude reference="YOQ-3T-72u"/>
+                                <exclude reference="4ZB-Zv-Dcd"/>
+                                <exclude reference="FgF-3X-xQi"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -230,6 +282,9 @@
                                 <include reference="VAI-fK-8b6"/>
                                 <include reference="Tg0-y2-cjp"/>
                                 <include reference="6eX-QY-EFK"/>
+                                <include reference="YOQ-3T-72u"/>
+                                <include reference="4ZB-Zv-Dcd"/>
+                                <include reference="FgF-3X-xQi"/>
                             </mask>
                         </variation>
                     </view>
@@ -241,6 +296,8 @@
                         <outlet property="btnStar4" destination="4qw-F3-K9X" id="qOu-nO-tPV"/>
                         <outlet property="btnStar5" destination="nRa-p4-fMA" id="FVn-yB-wNv"/>
                         <outlet property="datePicker" destination="6eX-QY-EFK" id="7EZ-cK-KPN"/>
+                        <outlet property="lblNumberDays" destination="FgF-3X-xQi" id="FgQ-hw-KvD"/>
+                        <outlet property="sliderDay" destination="4ZB-Zv-Dcd" id="wGZ-Ic-D7S"/>
                         <outlet property="tBoxDestination" destination="jGG-n6-0w0" id="tP5-bx-LQS"/>
                         <outlet property="tBoxExperience" destination="xmD-at-0dF" id="iBq-vt-KZF"/>
                         <segue destination="RLb-2d-d3r" kind="show" identifier="saveToCell" id="aIq-P3-yKW"/>
@@ -262,27 +319,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slika" highlightedImage="AlignCenter" translatesAutoresizingMaskIntoConstraints="NO" id="dPC-wU-Irx">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.61574687788692983" green="0.73169404268264771" blue="0.72724106953994105" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="7" y="0.0" width="400" height="600"/>
-                                </variation>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOd-jf-0sj">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.58136147520000003" green="0.73169404270000005" blue="0.58441698230000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Open travel list">
-                                    <color key="titleColor" red="0.73169404270000005" green="0.09207590014" blue="0.28767627159999998" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="191" y="504" width="112" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="RLb-2d-d3r" kind="show" id="NSz-Mq-8em"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCX-SY-TjF">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.56524954240000003" green="0.73169404270000005" blue="0.67134815579999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -291,26 +327,38 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="205" y="461" width="84" height="30"/>
+                                    <rect key="frame" x="96" y="438" width="199" height="52"/>
                                 </variation>
                                 <connections>
                                     <segue destination="ttj-Ys-HRA" kind="show" id="DPd-pw-z0W"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOd-jf-0sj">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.58136147520000003" green="0.73169404270000005" blue="0.58441698230000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Open travel list">
+                                    <color key="titleColor" red="0.73169404270000005" green="0.09207590014" blue="0.28767627159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="96" y="506" width="199" height="52"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="RLb-2d-d3r" kind="show" id="NSz-Mq-8em"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.75686274509999996" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="dPC-wU-Irx"/>
-                                <exclude reference="mOd-jf-0sj"/>
                                 <exclude reference="xCX-SY-TjF"/>
+                                <exclude reference="mOd-jf-0sj"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="dPC-wU-Irx"/>
-                                <include reference="mOd-jf-0sj"/>
                                 <include reference="xCX-SY-TjF"/>
+                                <include reference="mOd-jf-0sj"/>
                             </mask>
                         </variation>
                     </view>
@@ -321,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOK-ym-lgR" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-369" y="1344"/>
+            <point key="canvasLocation" x="-190.5" y="1353"/>
         </scene>
         <!--View Controller Travel List View Controller-->
         <scene sceneID="Ca1-O4-3Un">
@@ -368,7 +416,16 @@
                                                     </variation>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="0.72612504778789044" blue="0.74090883387122941" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="travelInfo2" id="YCh-SK-Ywb">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YCh-SK-Ywb" id="aHc-ee-QGn">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.87984773707102848" green="1" blue="0.96177772488725188" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -397,15 +454,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rTC-Hx-RHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="765" y="1172"/>
+            <point key="canvasLocation" x="828" y="1270"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="AlignCenter" width="24" height="18"/>
-        <image name="slika" width="640" height="960"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ESH-9b-PCm"/>
+        <segue reference="BQ5-wM-neZ"/>
         <segue reference="aIq-P3-yKW"/>
     </inferredMetricsTieBreakers>
 </document>

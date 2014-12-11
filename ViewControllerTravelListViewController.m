@@ -7,9 +7,12 @@
 //
 
 #import "ViewControllerTravelListViewController.h"
+#import "MemoryStorage.h"
 
 @interface ViewControllerTravelListViewController ()
-@property NSMutableArray *listTravels;
+
+@property MemoryStorage *TravelsMemory;
+
 @end
 
 
@@ -18,24 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.listTravels=[[NSMutableArray alloc] init];
-    Travel *t1=[[Travel alloc] init];
-    t1.experience=@"iskustvo";
-    t1.rating=5;
-    t1.destination=@"Sarajvo";
-    Travel *t2=[[Travel alloc] init];
-    t2.experience=@"iskustdsadfsdvo";
-    t2.rating=2;
-    t2.destination=@"Sarfdsfajvo";
-    
-    [self.listTravels addObject:t1];
-    [self.listTravels addObject:t2];
-    
-    
-    //Iz baye ce uyimat informaciju o broju Putovanja
-    
-    
-    // Do any additional setup after loading the view.
+  // moramo imati ovdje deklariran Memorystorage yobg ispisa u tabeli
+    _TravelsMemory=[MemoryStorage sharedManager];
 }
 
 
@@ -45,12 +32,38 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.listTravels.count;
+    return _TravelsMemory.listTravelsArray.count;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"travelInfo"];
-    cell.textLabel.text = [self.listTravels[indexPath.row] fullDetails];
+    
+    
+    UITableViewCell* cell;
+   
+    // if(indexPath.row%2==0){
+    
+    // cell=[tableView dequeueReusableCellWithIdentifier:@"showUser"];
+    //      cell.textLabel.text=[[NSString alloc] initWithFormat:@"User %ld", (long)indexPath.row];}
+    //  else{
+    //      cell=[tableView dequeueReusableCellWithIdentifier:@"showUser2"];
+    //      cell.textLabel.text=[[NSString alloc] initWithFormat:@"User %ld", (long)indexPath.row];
+    // }
+    
+    //ili
+    if(indexPath.row%2==0){
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:@"travelInfo"];}
+    
+    else{
+        cell = [tableView dequeueReusableCellWithIdentifier:@"travelInfo2"];
+        
+    }
+    
+    cell.textLabel.text=[_TravelsMemory.listTravelsArray[indexPath.row] fullDetails];
+   
+
+    
+    
     return cell;
 }
 

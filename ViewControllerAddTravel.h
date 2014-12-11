@@ -20,7 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UITextField *tBoxDestination;
 @property (weak, nonatomic) IBOutlet UITextView *tBoxExperience;
-
+@property (weak, nonatomic) IBOutlet UILabel *lblNumberDays;
+@property (weak, nonatomic) IBOutlet UISlider *sliderDay;
 
 - (void)btnStarColor:(NSInteger)rating;
 

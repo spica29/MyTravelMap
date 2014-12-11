@@ -10,7 +10,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet UIView *mapView;
 @end
 
 @implementation ViewController{
@@ -58,7 +58,10 @@
     mapView_.mapType = kGMSTypeNormal;//mijenjati tipove mape
     mapView_.mapType = kGMSTypeTerrain;
     mapView_.mapType = kGMSTypeHybrid;
-    self.view = mapView_;
+    
+   //self.view = mapView_;
+    
+    self.mapView = mapView_;
     
     // Creates a marker in the center of the map.
     GMSMarker *marker = [[GMSMarker alloc] init];
@@ -66,6 +69,8 @@
     //marker.title = @"Sydney";
     //marker.snippet = @"Australia";
     marker.map = mapView_;
+
+
 }
 
 
