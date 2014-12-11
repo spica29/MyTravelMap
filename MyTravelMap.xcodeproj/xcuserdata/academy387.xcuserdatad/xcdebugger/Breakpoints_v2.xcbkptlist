@@ -29,8 +29,13 @@
             timestampString = "440011230.011739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+<<<<<<< HEAD
             startingLineNumber = "80"
             endingLineNumber = "80">
+=======
+            startingLineNumber = "79"
+            endingLineNumber = "79">
+>>>>>>> fcd6fdfe5aa29080148f1948d2179c8b8ebc61fb
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -43,8 +48,13 @@
             timestampString = "440011230.011739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+<<<<<<< HEAD
             startingLineNumber = "77"
             endingLineNumber = "77"
+=======
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+>>>>>>> fcd6fdfe5aa29080148f1948d2179c8b8ebc61fb
             landmarkName = "@implementation ViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -183,6 +193,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "MyTravelMap/ViewController.m"
             timestampString = "440010986.577182"
             startingColumnNumber = "9223372036854775807"
@@ -190,6 +201,15 @@
             startingLineNumber = "51"
             endingLineNumber = "51"
             landmarkName = "-mapa"
+=======
+            filePath = "MyTravelMap/MemoryStorage.m"
+            timestampString = "440010788.47502"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "-init"
+>>>>>>> fcd6fdfe5aa29080148f1948d2179c8b8ebc61fb
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
