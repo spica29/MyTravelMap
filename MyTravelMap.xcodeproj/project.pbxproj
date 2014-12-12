@@ -21,11 +21,10 @@
 		20CA0B0E1A361F6800F8207B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA0B0D1A361F6800F8207B /* SystemConfiguration.framework */; };
 		20CA0B461A36207600F8207B /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA0B451A36207600F8207B /* GoogleMaps.framework */; };
 		E90348941A3A0D4000617E2F /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = E90348931A3A0D4000617E2F /* City.m */; };
-		E90348961A3A0D7E00617E2F /* MemoryStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = E90348951A3A0D7E00617E2F /* MemoryStorage.m */; };
 		E924CE5A1A37655000F05F7A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E924CE591A37655000F05F7A /* MainViewController.m */; };
+		E93840311A3B562A00B5FB8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93840301A3B562A00B5FB8A /* ViewController.m */; };
 		E956F9441A361138001AB27F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E956F9431A361138001AB27F /* main.m */; };
 		E956F9471A361138001AB27F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E956F9461A361138001AB27F /* AppDelegate.m */; };
-		E956F94A1A361138001AB27F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E956F9491A361138001AB27F /* ViewController.m */; };
 		E956F94D1A361138001AB27F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E956F94B1A361138001AB27F /* Main.storyboard */; };
 		E956F94F1A361138001AB27F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E956F94E1A361138001AB27F /* Images.xcassets */; };
 		E956F9521A361138001AB27F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E956F9501A361138001AB27F /* LaunchScreen.xib */; };
@@ -34,11 +33,8 @@
 		E956F9791A363245001AB27F /* ViewControllerTravelListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E956F9771A363245001AB27F /* ViewControllerTravelListViewController.m */; };
 		E956F97C1A363269001AB27F /* Travel.m in Sources */ = {isa = PBXBuildFile; fileRef = E956F97B1A363269001AB27F /* Travel.m */; };
 		E98718CE1A3624190007C15F /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E98718CD1A3624190007C15F /* GoogleMaps.bundle */; };
-
 		E9CCAE4F1A3A03B900762B0F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9CCAE4D1A3A03B900762B0F /* Model.xcdatamodeld */; };
-
 		E9D9E1001A3A054700C527CF /* MemoryStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D9E0FF1A3A054700C527CF /* MemoryStorage.m */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,17 +63,15 @@
 		20CA0B451A36207600F8207B /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		E90348921A3A0D4000617E2F /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
 		E90348931A3A0D4000617E2F /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
-		E90348951A3A0D7E00617E2F /* MemoryStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryStorage.m; sourceTree = "<group>"; };
-		E90348971A3A0D9500617E2F /* MemoryStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryStorage.h; sourceTree = "<group>"; };
 		E924CE581A37655000F05F7A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = SOURCE_ROOT; };
 		E924CE591A37655000F05F7A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = SOURCE_ROOT; };
+		E93840301A3B562A00B5FB8A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		E956F93E1A361138001AB27F /* MyTravelMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTravelMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E956F9421A361138001AB27F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E956F9431A361138001AB27F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E956F9451A361138001AB27F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E956F9461A361138001AB27F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E956F9481A361138001AB27F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E956F9491A361138001AB27F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E956F94C1A361138001AB27F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E956F94E1A361138001AB27F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E956F9511A361138001AB27F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -91,12 +85,9 @@
 		E956F97A1A363269001AB27F /* Travel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Travel.h; sourceTree = "<group>"; };
 		E956F97B1A363269001AB27F /* Travel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Travel.m; sourceTree = "<group>"; };
 		E98718CD1A3624190007C15F /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-
 		E9CCAE4E1A3A03B900762B0F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-
 		E9D9E0FE1A3A04DC00C527CF /* MemoryStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryStorage.h; sourceTree = "<group>"; };
 		E9D9E0FF1A3A054700C527CF /* MemoryStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryStorage.m; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,10 +159,8 @@
 				E90348921A3A0D4000617E2F /* City.h */,
 				E90348931A3A0D4000617E2F /* City.m */,
 				E9CCAE4D1A3A03B900762B0F /* Model.xcdatamodeld */,
-
 				E9D9E0FE1A3A04DC00C527CF /* MemoryStorage.h */,
 				E9D9E0FF1A3A054700C527CF /* MemoryStorage.m */,
-
 				E956F97A1A363269001AB27F /* Travel.h */,
 				E956F97B1A363269001AB27F /* Travel.m */,
 				E956F9741A363245001AB27F /* ViewControllerAddTravel.h */,
@@ -180,8 +169,8 @@
 				E956F9771A363245001AB27F /* ViewControllerTravelListViewController.m */,
 				E956F9451A361138001AB27F /* AppDelegate.h */,
 				E956F9461A361138001AB27F /* AppDelegate.m */,
+				E93840301A3B562A00B5FB8A /* ViewController.m */,
 				E956F9481A361138001AB27F /* ViewController.h */,
-				E956F9491A361138001AB27F /* ViewController.m */,
 				E956F94B1A361138001AB27F /* Main.storyboard */,
 				E924CE581A37655000F05F7A /* MainViewController.h */,
 				E924CE591A37655000F05F7A /* MainViewController.m */,
@@ -320,13 +309,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9D9E1001A3A054700C527CF /* MemoryStorage.m in Sources */,
-				E956F94A1A361138001AB27F /* ViewController.m in Sources */,
 				E956F97C1A363269001AB27F /* Travel.m in Sources */,
 				E90348941A3A0D4000617E2F /* City.m in Sources */,
 				E956F9471A361138001AB27F /* AppDelegate.m in Sources */,
 				E9CCAE4F1A3A03B900762B0F /* Model.xcdatamodeld in Sources */,
+				E93840311A3B562A00B5FB8A /* ViewController.m in Sources */,
 				E956F9791A363245001AB27F /* ViewControllerTravelListViewController.m in Sources */,
-				E90348961A3A0D7E00617E2F /* MemoryStorage.m in Sources */,
 				E924CE5A1A37655000F05F7A /* MainViewController.m in Sources */,
 				E956F9781A363245001AB27F /* ViewControllerAddTravel.m in Sources */,
 				E956F9441A361138001AB27F /* main.m in Sources */,
@@ -460,11 +448,7 @@
 				INFOPLIST_FILE = MyTravelMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/faik/Projects/Academy387Group3/GoogleMaps.framework,
-					/Users/faik/Projects/Academy387Group3/GoogleMaps.framework/Versions/A,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -481,11 +465,7 @@
 				INFOPLIST_FILE = MyTravelMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/faik/Projects/Academy387Group3/GoogleMaps.framework,
-					/Users/faik/Projects/Academy387Group3/GoogleMaps.framework/Versions/A,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -573,4 +553,3 @@
 	};
 	rootObject = E956F9361A361138001AB27F /* Project object */;
 }
-

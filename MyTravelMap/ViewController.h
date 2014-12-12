@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIView *mapView;
+
 
 
 

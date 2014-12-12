@@ -11,7 +11,7 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet GMSMapView *mapa;
+@property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 
 @end
 
@@ -60,7 +60,7 @@
     mapView_.mapType = kGMSTypeNormal;//mijenjati tipove mape
     mapView_.mapType = kGMSTypeTerrain;
     mapView_.mapType = kGMSTypeHybrid;
-    self.mapa = mapView_;
+    self.mapView = mapView_;
     
     // Creates a marker in the center of the map.
     GMSMarker *marker = [[GMSMarker alloc] init];
@@ -68,8 +68,8 @@
     //marker.title = @"Sydney";
     //marker.snippet = @"Australia";
     marker.map = mapView_;
-
-
+    
+    
 }
 
 
