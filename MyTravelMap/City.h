@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface City : NSObject
 
 @property NSString *name;
 
-@property NSInteger longitude;
+@property CLLocationDegrees longitude;
 
-@property NSInteger latitude;
+@property CLLocationDegrees latitude;
 
 
 

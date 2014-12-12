@@ -7,53 +7,50 @@
 //
 
 #import "ViewController.h"
+#import "City.h"
+#import "MemoryStorage.h"
+#import "Travel.h"
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
+@property (copy, nonatomic) NSSet *markers;
+@property MemoryStorage *TravelsMemory;
+//@property NSMutableArray *markersArray;
 
 @end
 
 @implementation ViewController{
     GMSMapView *mapView_;
-    CLLocationDegrees latitude;
-    CLLocationDegrees longitude;
+    NSMutableArray *markersArray;
+    
+}
+
+- (void)drawMarkers {
+    for(GMSMarker *marker in self.markers) {
+        marker.map = self.mapView;
+    }
 }
 
 - (void)viewDidLoad {
+
+    
+    [self drawMarkers];
+    _TravelsMemory = [MemoryStorage sharedManager];
     [super viewDidLoad];
-    latitude = 0;
-    longitude = 0;
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    // API za koordinate zadanog grada
-    NSString* city = @"Zurich";
-    NSString* serverPath = [[NSString alloc] initWithFormat:@("https://maps.googleapis.com/maps/api/geocode/json?address=%@&key=AIzaSyCbQwlpEl2MRB-il9MljyU5wCcR8fOXEfQ"), city];
-    NSURL* serverUrl = [[NSURL alloc] initWithString:serverPath];
-    
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:serverUrl];
-    
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                               NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-                               latitude = [[[[[[responseDict valueForKey:@"results"] valueForKey:@"geometry"] valueForKey:@"location"]valueForKey:@"lat" ] objectAtIndex:0] doubleValue];
-                               longitude = [[[[[[responseDict valueForKey:@"results"] valueForKey:@"geometry"] valueForKey:@"location"]valueForKey:@"lng" ] objectAtIndex:0] doubleValue];
-                               [self mapa];
-                           }];
-    
+markersArray = [[NSMutableArray alloc] init];
     //NSLog(@"latitude: %f longitude: %f", latitude, longitude);
     //addressCoordinate = CLLocationCoordinate2DMake((CLLocationDegrees)[[latArray objectAtIndex:indexPath.row] doubleValue],(CLLocationDegrees)[[longArray objectAtIndex:indexPath.row] doubleValue]);
-    
+    [self mapa];
 }
 
 //https://maps.googleapis.com/maps/api/place/autocomplete/output?parameters autocomplete
 
 -(void)mapa {
     // Create a GMSCameraPosition that tells the map to display the
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: latitude
-                                                            longitude: longitude
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: 0
+                                                            longitude: 0
                                                                  zoom:5];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.myLocationEnabled = YES;
@@ -62,14 +59,21 @@
     mapView_.mapType = kGMSTypeHybrid;
     self.mapView = mapView_;
     
-    // Creates a marker in the center of the map.
-    GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = CLLocationCoordinate2DMake(latitude, longitude);
-    //marker.title = @"Sydney";
-    //marker.snippet = @"Australia";
-    marker.map = mapView_;
     
-    
+
+    for(int i = 0; i < [_TravelsMemory.listTravelsArray count]; i++)
+    {
+        GMSMarker *marker = [[GMSMarker alloc] init];
+        Travel *travel = [_TravelsMemory.listTravelsArray objectAtIndex:i];
+        marker.position = CLLocationCoordinate2DMake(travel.city.latitude, travel.city.longitude);
+        marker.title = travel.city.name;
+        marker.map = _mapView;
+        
+        [markersArray addObject:marker];
+    //   [markersArray release];
+    }
+    [NSSet setWithObjects:markersArray, nil];
+    [self drawMarkers];
 }
 
 

@@ -12,6 +12,7 @@
 
 @interface ViewControllerAddTravel ()
 @property MemoryStorage *TravelsMemory;
+@property NSDate *dateNow;
 @end
 
 @implementation ViewControllerAddTravel
@@ -25,6 +26,7 @@
     [self.btnStar5 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     self.travel = [[Travel alloc] init];
     self.travel.numDays=1;
+    self.dateNow=self.datePicker.date;
     
     _TravelsMemory=[MemoryStorage sharedManager];
 
@@ -32,16 +34,46 @@
 }
 
 - (IBAction)saveClicked:(id)sender {
- 
+    
+    self.travel.city = [[City alloc] init];
     self.travel.destination=self.tBoxDestination.text;
+    self.travel.city.name=self.tBoxDestination.text;
     self.travel.experience=self.tBoxExperience.text;
     self.travel.date=self.datePicker.date;
     //MemoryStorage sharedManager
     
-    [_TravelsMemory.listTravelsArray addObject:self.travel];
     
-   //[self performSegueWithIdentifier:@"saveToCell" sender:self];
+    self.travel.city.latitude = 0;
+    self.travel.city.longitude = 0;
+    // Do any additional setup after loading the view, typically from a nib.
     
+    // API za koordinate zadanog grada
+
+    NSString* serverPath = [[NSString alloc] initWithFormat:@("https://maps.googleapis.com/maps/api/geocode/json?address=%@&key=AIzaSyCbQwlpEl2MRB-il9MljyU5wCcR8fOXEfQ"), self.travel.city.name];
+    NSURL* serverUrl = [[NSURL alloc] initWithString:serverPath];
+    
+    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:serverUrl];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                               self.travel.city.latitude = [[[[[[responseDict valueForKey:@"results"] valueForKey:@"geometry"] valueForKey:@"location"]valueForKey:@"lat" ] objectAtIndex:0] doubleValue];
+                               self.travel.city.longitude = [[[[[[responseDict valueForKey:@"results"] valueForKey:@"geometry"] valueForKey:@"location"]valueForKey:@"lng" ] objectAtIndex:0] doubleValue];
+                               [_TravelsMemory.listTravelsArray addObject:self.travel];
+
+                               //[self mapa];
+                           }];
+    
+    
+    
+    self.tBoxDestination.text=@"";
+    self.tBoxExperience.text=@"";
+    self.datePicker.date=self.dateNow;
+    self.sliderDay.value=1;
+    self.travel.rating=0;
+    [self btnStarColor:0];
+
     //desava se dodjela na klik dugmeta AddTravel
 }
 
@@ -88,6 +120,14 @@
 
 - (void)btnStarColor:(NSInteger)rating
 {
+    if(rating==0)
+    {
+        [self.btnStar1 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [self.btnStar2 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [self.btnStar3 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [self.btnStar4 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [self.btnStar5 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    }
     if (rating==1) {
         [self.btnStar1 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
         [self.btnStar2 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];

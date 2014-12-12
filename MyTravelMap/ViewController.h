@@ -13,6 +13,9 @@
 
 
 
+@property (weak, nonatomic) IBOutlet UIButton *btnAddTravel;
+@property (weak, nonatomic) IBOutlet UIButton *btnTravelList;
+
 
 
 @end
